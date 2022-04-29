@@ -48,15 +48,19 @@ a {
   margin: 0 auto;
 }
 
-.navbar__nav {
+.navbar__nav ul {
   font-size: 18px;
   color: #fff;
   display: flex;
 }
 
-.navbar__nav > li {
+.navbar__nav ul > li {
   margin: 0 16px;
   font-weight: bold;
+}
+
+.navbar__nav--hamburguer {
+  display: none;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -228,6 +232,14 @@ blockquote {
   }
 }
 @media screen and (max-width: 770px) {
+  .navbar__nav {
+    display: none;
+  }
+
+  .navbar__nav--hamburguer {
+    display: block;
+  }
+
   .div-minibio {
     flex-direction: column;
   }
@@ -252,7 +264,7 @@ blockquote {
 }
 
 @media screen and (max-width: 468px) {
-  .navbar__nav {
+  .navbar__nav ul {
     display: none;
   }
 
